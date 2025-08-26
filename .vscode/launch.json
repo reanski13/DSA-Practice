@@ -8,8 +8,13 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
+<<<<<<< HEAD
       "cwd": "c:/Users/Rean/SCHOOL/DSA-Practice",
       "program": "c:/Users/Rean/SCHOOL/DSA-Practice/build/Debug/outDebug",
+=======
+      "cwd": "c:/CODE/2nd year practice/DSA-Practice",
+      "program": "c:/CODE/2nd year practice/DSA-Practice/build/Debug/outDebug",
+>>>>>>> 21f7760b1d100da8739e1b135f254d7c0e48e0b0
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
