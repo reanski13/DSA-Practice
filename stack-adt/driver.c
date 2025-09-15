@@ -1,8 +1,7 @@
 #include<stdio.h>
 #include<string.h>
-#include "ADTArray.h"
 //#include "linkedlist.h"
-// #include "arraylist.h"
+ #include "arraylist.h"
 // #include "cblist.h"
 
 int main() {
