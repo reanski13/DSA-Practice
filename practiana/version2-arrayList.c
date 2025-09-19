@@ -33,6 +33,7 @@ typedef struct{
 void initList(LIST **A);
 void insertLast(LIST *A, studRecord element);
 void display(LIST *A);
+void selectionSort(LIST *A);
 
 int main(){
     //sample data
@@ -80,6 +81,10 @@ int main(){
 
     display(L);
 
+    printf("\nSorted by Year:\n");
+    selectionSort(L);
+    display(L);
+
     return 0;
 }
 
@@ -96,7 +101,27 @@ void display(LIST *A){
     int i;
     printf("Current List:\n");
     for( i = 0; i < A->count; i++){
-        printf("%-10s %-10s %-10c - %-10d %-10s %-10d\n", A->Elements[i].name.LName, A->Elements[i].name.LName, A->Elements[i].name.Mi, A->Elements[i].ID, A->Elements[i].Course, A->Elements[i].Year);
+        printf("%-10s %-10s %-10c - %-10d %-10s %-10d\n", A->Elements[i].name.LName, A->Elements[i].name.FName, A->Elements[i].name.Mi, A->Elements[i].ID, A->Elements[i].Course, A->Elements[i].Year);
     }
 }
 
+
+void selectionSort(LIST *A){
+    int i, smallNdx, j;
+    for(i = 0; i < A->count-1; i++){
+        smallNdx = i;
+        for(j = i+1; j<A->count; j++){
+            if(A->Elements[j].Year < A->Elements[smallNdx].Year){
+                smallNdx = j;
+            }
+        }
+
+        if(smallNdx != i){
+        studRecord temp = A->Elements[i];
+        A->Elements[i] = A->Elements[smallNdx];
+        A->Elements[smallNdx] = temp;
+    }
+    }
+
+    
+}
